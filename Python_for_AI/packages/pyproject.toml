@@ -1,0 +1,20 @@
+# pyproject.toml
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "valipak"
+version = "0.1.0"
+authors = [
+  { name="Rahul", email="rahul@gmail.com" },
+]
+description = "A simple, practical package for data validation."
+readme = "README.md"  # You should create a README.md file
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
