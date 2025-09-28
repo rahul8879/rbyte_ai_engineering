@@ -27,13 +27,21 @@ st.title("KNN Iris Model Loader")
 
 st.write("KNN model loaded successfully!")
 
+
+
+# lets create the sidebar for different use cases
+st.sidebar.title("Iris Species Prediction")
+st.sidebar.write("Enter the iris features to predict the species.")
+
 # Input fields for iris features
-sepal_length = st.number_input("Sepal Length (cm)", min_value=0.0, max_value=10.0, value=5.1)
-sepal_width = st.number_input("Sepal Width (cm)", min_value=0.0, max_value=10.0, value=3.5)
-petal_length = st.number_input("Petal Length (cm)", min_value=0.0, max_value=10.0, value=1.4)
-petal_width = st.number_input("Petal Width (cm)", min_value=0.0, max_value=10.0, value=0.2)
+sepal_length = st.sidebar.number_input("Sepal Length (cm)", min_value=0.0, max_value=10.0, value=5.1)
+sepal_width = st.sidebar.number_input("Sepal Width (cm)", min_value=0.0, max_value=10.0, value=3.5)
+petal_length = st.sidebar.number_input("Petal Length (cm)", min_value=0.0, max_value=10.0, value=1.4)
+petal_width = st.sidebar.number_input("Petal Width (cm)", min_value=0.0, max_value=10.0, value=0.2)
 input_data = [[sepal_length, sepal_width, petal_length, petal_width]]
 input_data = scaler.transform(input_data)
+# Predict button
+
 
 if st.button("Predict Iris Species"):
     prediction = model.predict(input_data)
